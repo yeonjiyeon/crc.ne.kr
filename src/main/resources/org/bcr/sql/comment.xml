@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="comment">
+	
+<!-- 댓글입력 -->
+ <insert id="insertComment" parameterType="org.bcr.model.CommentDTO">
+   insert into tbl_${nameOfBoard}_comment values(null, #{content_c},NOW(),#{id},#{no},#{ref},0)
+ </insert>
+ 
+ <update id="updatefirstComment" parameterType="org.bcr.model.ContentDTO">
+ 	update tbl_${b_name}_comment set
+ 	ref = #{ref}
+ 	where no_c = #{ref}
+ </update>
+ <update id="updateCount" parameterType="org.bcr.model.ContentDTO">
+ 	update tbl_${b_name}_comment set
+ 	re_step = #{re_step}
+ 	where no_c = #{ref}
+ </update>
+ 
+ <select id="stepmax" parameterType="org.bcr.model.ContentDTO" resultType="int">
+ 	select max(re_step) from tbl_${b_name}_comment where ref = #{o_ref}
+ </select>
+
+<select id="countComment" parameterType="org.bcr.model.ContentDTO" resultType="int">
+	select count(*) from tbl_${b_name}_comment where no = #{no} 
+</select>
+
+<select id="countTotal" parameterType="java.util.HashMap" resultType="int">
+	select count(*) from tbl_${b_name}_comment where no = #{no}
+</select>
+
+<select id="countRComment" parameterType="org.bcr.model.ContentDTO" resultType="int">
+	select count(*) from tbl_${b_name}_comment where no = #{no} and ref > 0
+</select>
+ 
+<select id="selectComment" parameterType="org.bcr.model.CommentListDTO" resultType="java.util.HashMap">
+	select * from tbl_${b_name}_comment where no = #{no}  order by ref desc , re_step asc
+	limit #{start},#{cnt}
+	
+</select>
+
+<delete id="deleteComment" parameterType="org.bcr.model.ContentDTO">
+	delete from tbl_${b_name}_comment where no_c=#{no}
+</delete>
+
+<update id="updateComment" parameterType="org.bcr.model.CommentDTO"> 
+	update tbl_${nameOfBoard}_comment set
+ 	content_c=#{content_c}
+ 	where no_c=#{no_c}
+</update>
+
+<select id="rcountmax" parameterType="org.bcr.model.ContentDTO" resultType="int">
+	select max(no_c) from tbl_${b_name}_comment where no = #{no}
+</select>
+
+
+<select id="commentCount" parameterType="java.util.HashMap" resultType="int">
+	select count(*) from tbl_${b_name}_comment where no = #{no}
+</select>
+ <!---->
+
+ 
+</mapper>

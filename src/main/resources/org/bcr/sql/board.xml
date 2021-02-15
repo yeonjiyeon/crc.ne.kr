@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+ 
+ <!-- 최대 글번호 얻기 -->
+ <select id="maxNumber" parameterType="org.bcr.model.BoardDTO" resultType="Integer">
+    select max(no) from tbl_${nameOfBoard}
+ </select>
+ 
+ 
+ <!-- 답글 끼워넣기 위치 확보 -->
+ <update id="reStep" parameterType="org.bcr.model.BoardDTO">
+    update tbl_${nameOfBoard}
+    set re_step=re_step+1
+    where ref=#{ref} and re_step>#{re_step}
+ </update>
+ 
+ <!-- 글쓰기,답글쓰기 -->
+ <insert id="insertBoard" parameterType="org.bcr.model.BoardDTO">
+   insert into tbl_${nameOfBoard} values(null, #{subject},#{content},NOW(),NOW(),0,'',#{ref},#{re_step},#{re_level},#{id})
+ </insert>
+ 
+ <!-- 글 갯수 -->
+ <select id="selectCount" parameterType="java.util.HashMap" resultType="int">
+   select count(*) from tbl_${b_name}
+ </select>
+ 
+ <!-- 검색어글갯수2  -->
+ 
+ <select id="selectCount2" parameterType="java.util.HashMap" resultType="int">
+   select count(*) from tbl_${b_name} where ${serch_type} Like '%${keyword}%'  
+ </select>
+ 
+  <!-- 검색어글갯수3  -->
+  
+  <select id="selectCount3" parameterType="java.util.HashMap" resultType="int">
+   select count(*) from tbl_${b_name} where subject Like '%${keyword}%' or id Like '%${keyword}%' or content Like '%${keyword}%'    
+ </select>
+ 
+ <!-- 리스트 -->
+ <select id="selectList" parameterType="org.bcr.model.ListDTO" resultType="org.bcr.model.BoardDTO">
+   select * from tbl_${b_name}
+   order by ref desc, re_step asc
+   limit #{start},#{cnt}
+ </select>
+ 
+ <!-- 검색어 글 갯수2 -->
+ <select id="selectList2" parameterType="org.bcr.model.ListDTO" resultType="org.bcr.model.BoardDTO">
+   select * from tbl_${b_name}
+   where ${serch_type} Like '%${keyword}%' 
+   order by ref desc, re_step asc
+   limit #{start},#{cnt}
+ </select>
+   <!-- 검색어글갯수3  -->
+ 
+  <select id="selectList3" parameterType="org.bcr.model.ListDTO" resultType="org.bcr.model.BoardDTO">
+   select * from tbl_${b_name}
+   where subject Like '%${keyword}%' or id Like '%${keyword}%' or content Like '%${keyword}%'
+   order by ref desc, re_step asc
+   limit #{start},#{cnt}
+ </select>
+ 
+ <!-- 메인리스트 -->
+ <select id="selectMainList" parameterType="org.bcr.model.ListDTO" resultType="org.bcr.model.BoardDTO">
+   select * from tbl_${b_name}
+   where re_level =0
+   order by ref desc, re_step asc
+   limit 0,10
+ </select>
+ 
+ <!-- 조횟수 -->
+ <update id="readCount" parameterType="org.bcr.model.ContentDTO">
+ 	update tbl_${b_name} set hit=hit+1
+ 	where no=#{no}
+ </update>
+ 
+ <!-- 글내용보기, 글수정 -->
+ <select id="contentBoard" parameterType="org.bcr.model.ContentDTO" resultType="org.bcr.model.BoardDTO">
+ 	select * from tbl_${b_name}
+ 	where no=#{no}
+ </select>
+ 
+ 
+ <!-- DB글수정 -->
+ <update id="updateBoard" parameterType="org.bcr.model.BoardDTO">
+ 	update tbl_${nameOfBoard} set
+ 	subject=#{subject},
+ 	content=#{content}
+ 	where no=#{no}
+ </update>
+ 
+ 
+ <!-- 글삭제 -->
+ <delete id="deleteBoard" parameterType="org.bcr.model.ContentDTO">
+ 	delete from tbl_${b_name} where no=#{no}
+ </delete>
+</mapper>

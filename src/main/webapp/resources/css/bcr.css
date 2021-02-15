@@ -1,0 +1,609 @@
+/* bcr.css */
+
+/* 메인 리스트 글제목 긴글 한줄 말줄임... 표시 기능 */
+.ellipsis {
+  text-overflow:ellipsis;		/* 생략 처리 ( ... )*/
+  white-space:nowrap;			/* 줄바꿈 하지 않고 잘림*/
+  word-wrap:normal;				/* 줄바꿈 하지 않고 한줄로 표시 nomal, break-word*/
+  width:380px;					/* 가로 길이 고정*/
+  overflow:hidden;				/* 스크롤 처리 하지 않음*/
+}
+
+p {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Style div */
+div.relative {
+  position: relative;
+  width: 100%;
+  height: ;
+  border: 0px solid #c0c0c0;
+} 
+
+div.absolute {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 300px;
+  height:;
+  border: 0px solid #c0c0c0;
+}
+
+div.header {
+  position: fixed;
+  color:white;
+  font-size:16px;  
+  background-color: #013f49;
+  padding: 0px 0px;
+  text-align: center;
+  top: 0px;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  border: 0px solid #c0c0c0;
+}
+
+div.content {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 960px;
+	height: ;
+	background-color: ;
+	color: ;
+	text-align: center;
+}
+
+div.main {
+  z-index: -1;
+} 
+
+div.a {
+  text-align: left;
+  text-decoration-line: underline; /* underline or overline or 함께 */
+  text-decoration-style: solid 1px #013f49; /* solid, dotted, double, dotted, dashed, wavy, initial */
+}
+
+div.a2 {
+  text-decoration-line: overline;
+  text-decoration-style: dashed;
+}
+
+div.a3 {
+  text-decoration-line: overline underline;
+  text-decoration-style: solid;
+}
+
+div.b {
+  text-decoration-line: underline; 
+  text-decoration-style: wavy;
+}
+
+div.c {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
+
+div.d {
+  text-decoration-line: overline underline;
+  text-decoration-style: wavy;
+}
+
+div.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	background-color: #013f49;
+	color: white;
+	text-align: center;
+}
+
+div.mlist {
+  position: relative;
+  width: 40%;
+  height: ;
+  border: 0px solid #c0c0c0;
+} 
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+/******div ul li a********************************/
+/* unvisited link */
+div ul li a:link {
+  color:#bfdfdf;
+  text-decoration: none;
+}
+
+/* visited link */
+div ul li a:visited {
+  color:#bfdfdf;
+  text-decoration: none;
+}
+
+/* mouse over link */
+div ul li a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* selected link */
+div ul li a:active {
+  color: #00ffff;
+  text-decoration: none;
+} 
+/******div ul li a********************************/
+
+/******div h4 a********************************/
+/* unvisited link */
+div h4 a:link {
+  color:#006666;
+  text-decoration: none;
+}
+
+/* visited link */
+div h4 a:visited {
+  color:#006666;
+  text-decoration: none;
+}
+
+/* mouse over link */
+div h4 a:hover {
+  color: #ff8000;
+  text-decoration: underline;
+}
+
+/* selected link */
+div h4 a:active {
+  color: #ff8000;
+  text-decoration: none;
+} 
+/******div h4 a********************************/
+
+/******td h1 a********************************/
+/* unvisited link */
+td h1 a:link {
+  color:#313131;
+  text-decoration: none;
+}
+
+/* visited link */
+td h1 a:visited {
+  color:#313131;
+  text-decoration: none;
+}
+
+/* mouse over link */
+td h1 a:hover {
+  color: #c0c0c0;
+  text-decoration: none;
+}
+
+/* selected link */
+td h1 a:active {
+  color: #c0c0c0;
+  text-decoration: none;
+} 
+/******td h1 a********************************/
+
+
+/*기본 버튼 class="button button2" 이런식으로 표현*/	
+.button {
+  background-color: white; /* white */
+  border: none;
+  color: black;
+  padding: 6px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  opacity: 1;
+  cursor: pointer;
+}
+.button1 {border: none;padding: 2px 4px;margin: 0px 0px;} /* 버튼사이즈변경 */
+
+.button:hover {opacity: 0.6;
+  background-color: #008CBA;/* Blue */
+  color: white;
+  text-decoration: none;
+}
+
+.button2 {background-color: #008CBA; color: white;} /* Blue */
+.button3 {background-color: #f44336; color: white;} /* Red */ 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button5 {background-color: #555555; color: white;} /* Black */
+
+/*기본 버튼 class="button button2" 이런식으로 표현*/	
+
+
+/*로그인 버튼*/
+.btn {
+  background-color: #499292;
+  border: none;
+  color: white;
+  padding:6px;
+  text-align: center;
+  text-decoration: none;
+  display: ;
+  font-size: 14px;
+  margin: 0px 0px;
+  cursor: pointer;
+  border-radius: 20px
+}
+
+body,h1,h2,h3,h4,h5,h6,.w3-wide {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+/*table text-align:left*/
+table {
+  margin:auto;
+  color:#5B5B5B;
+  width:100%;  
+  text-align:left;
+  border:0px solid #ddd;
+  border-collapse:collapse;
+  padding:10px;
+}
+
+th, td {
+  color:#5B5B5B;
+  border:1px solid #ddd;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px; /* 25px top, 10px right, 4px bottom and 35px */
+  padding:8px;
+}
+
+tr {background-color: rgba(242, 242, 242, 0.2);}
+tr:nth-child(even) {background-color: rgba(242, 242, 242, 0.5);}
+
+table.a {
+  table-layout: auto;
+  width: 80%;  
+}
+
+table.b {  
+  table-layout: auto;
+  width: 300px;
+}
+
+table.c {
+  color: white;
+  table-layout: auto;  
+  width: 600px;
+  border:0px solid #ddd; 
+  spacing:0px;
+  padding:0px; 
+}
+
+table.login {  
+  table-layout: auto;
+  width:280px;
+}
+
+table.main {
+  border-collapse: collapse;
+  color: white;
+  table-layout: auto;  
+  width: 600px;
+  border:0px solid #ddd; 
+  spacing:0px;
+  padding:0px; 
+  background: rgba(0, 0, 0, 0.1) ; 
+}
+
+table.tbmenu {
+	font-size: 14px;
+	color: white;
+	width: 960px;
+	height: 70px;
+	background:rgba(0, 0, 0, 1.0) ;;
+}
+
+table.menu {
+	font-size: 14px;
+	color: white;
+	width: 100%;
+	background:#013f49;
+}
+
+
+/* 주제목 그린배경 하얀색 큰글씨 */
+th.green {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  padding:16px;
+}
+
+td.right {
+	text-align:right;
+	color: #028197;	
+}
+
+td font.mhit {
+	text-align:left;
+	color: #028197;	
+}
+
+td.left {
+  color:#3D3D3D;
+  text-align:left;
+  padding: 10px;	
+}
+
+td.leftGrey {
+	color:#3D3D3D;
+	opacity:0.7; /* 0~1까지의 값을 가짐 */
+	background-color: rgba(255 106 106, 0.7);	
+	text-align:left;	
+}
+
+td.rightGrey {
+	color:#3D3D3D;
+	opacity:0.7; /* 0~1까지의 값을 가짐 */
+	background-color: rgba(255 106 106, 0.7);	
+	text-align:right;
+}
+
+/* 테이블 text-align:center 그레이 바탕화면 */
+td.cent {
+  color:#3D3D3D;
+  /* background-color: rgba(242, 242, 242, 0.8); */
+  text-align:center;
+  opacity:0.7; /* 0~1까지의 값을 가짐 */
+}
+
+/* 테이블 text-align:center2 투명 바탕화면 */
+td.cent2 {
+  color:#3D3D3D;
+  text-align:center;
+  padding: 10px;
+}
+
+td.bgsepia {
+	background-color: rgba(94,38,18, 0.7);
+	border:0px solid black;
+}
+
+td.mmenu {
+  color:#408080;
+  font-size: 3em;
+  text-align: center;
+  padding: 14px;
+}
+
+.center {
+  position: absolute;
+  left:0%;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+textarea {
+  color:#2F4F4F;
+  width: 98%;
+  height: auto;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 16px;
+  resize: yes;
+}
+
+/* unvisited link */
+a:link {
+  color:#363636;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color:#a0a0a0;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #408080;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #ffffff;
+  text-decoration: none;
+} 
+
+
+form.font {
+	font-size:11px;
+}
+
+/* 글쓰기 textarea 대신에 div를 대신 넣어서 id=editor로 자바스크립트추가 html 소스 가능 */
+.test_box {	
+		background-color:#fff;
+        width: 100%; 
+        min-height: 400px; 
+        max-height: 300px;
+        _height: 400px; 
+        margin-left: auto; 
+        margin-right: auto; 
+        padding: 1%; 
+        outline: 0; 
+        border: 1px solid #a0b3d6; 
+        font-size: 16px; 
+        word-wrap: break-word;
+        word-break: keep-all;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-radius: 5px 5px;
+}
+
+/*상단 nav menu 시작 ************************************************/
+.nav {
+  background-color:; 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline;
+  font-size: 16px;
+  padding: 8px;
+}
+/*상단 nav menu 끝*************************************************/
+
+/* Sidenav bar 시작 ******************************/
+.sidenav {
+  height: 460px;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #efefef;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 40px;
+}
+
+.sidenav a {
+  padding: 4px 4px 4px 25px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #6b6b6b;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #ff8000;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 4px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* Sidenav bar 끝********************************/
+
+    
+/*반응형 웹 화면변화/ 데스크탑에서는 기본크기 / 가로992px 탭,아이패드 에서 바탕화면과 테이블 사이즈 자동변형*/
+
+/* On screens that are 1100px wide or less, the background color is blue */
+@media screen and (max-width: 1100px) {
+  body {  
+    background-color:;
+    color: ;
+  }
+  div a.hidden3 {display:none;} 
+  ul li.hidden3 {display:none;} 
+}
+
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {
+  body {  
+    background-color:;
+    color: ;
+  }
+  td.hidden {display: none;} /*탭,패드 화면에서 테이블 일부 칼럼 안보이게 처리*/
+  table {width:98%}  
+  div {width:100%;}
+  div a.hidden {display:none;} 
+  ul li.hidden2 {display:none;} 
+  
+    /* 메인 리스트 글제목 긴글 한줄 말줄임... 표시 기능 */
+	.ellipsis {
+	  text-overflow:ellipsis;		/* 생략 처리 ( ... )*/
+	  white-space:nowrap;			/* 줄바꿈 하지 않고 잘림*/
+	  word-wrap:normal;				/* 줄바꿈 하지 않고 한줄로 표시 nomal, break-word*/
+	  width:300px;					/* 가로 길이 고정*/
+	  overflow:hidden;				/* 스크롤 처리 하지 않음*/
+	}
+}
+
+/*반응형 웹 화면변화/ 데스크탑에서는 기본크기 / 가로500px 스마트폰 에서 바탕화면과 테이블 사이즈 자동변형*/
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+  body {   
+  height:  ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  }
+  td.hidden1 {display: none;} /*스마트폰 화면에서 테이블 일부 칼럼 추가로 더 안보이게 처리*/
+  td.hidden {display: none;} 
+  table {width:100%}  
+  table.a {width:100%}
+  table.b {width:100%}
+  table.c {width:100%} 
+  table.main {width:100%}
+  table.login {width:90%}  
+  .test_box {
+  		background-color:#fff;
+        width: 100%; 
+        min-height: auto; 
+        max-height: ;
+        _height: auto; 
+        margin-left: auto; 
+        margin-right: auto; 
+        padding: 1%; 
+        outline: 0; 
+        border: 1px solid #a0b3d6; 
+        font-size: 12px; 
+        word-wrap: break-word;
+        word-break: keep-all;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-radius: 5px 5px;
+  }
+  div {width:100%;}
+  div a.hidden {display:none;}
+  ul li.hidden1 {display:none;}
+  ul li.hidden {display:none;}
+
+  /* 메인 리스트 글제목 긴글 한줄 말줄임... 표시 기능 */
+	.ellipsis {
+	  text-overflow:ellipsis;		/* 생략 처리 ( ... )*/
+	  white-space:nowrap;			/* 줄바꿈 하지 않고 잘림*/
+	  word-wrap:normal;				/* 줄바꿈 하지 않고 한줄로 표시 nomal, break-word*/
+	  width:290px;					/* 가로 길이 고정*/
+	  overflow:hidden;				/* 스크롤 처리 하지 않음*/
+	}
+}
+
