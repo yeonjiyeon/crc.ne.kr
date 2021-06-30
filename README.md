@@ -5,5 +5,5 @@
 
 #### <프로젝트 정보>
 ###### -font: HTML, CSS, JavaSript, jQuery
-###### -back: 
+###### -back: java, jsp/servlet
 ###### -database: mysql
