@@ -13,6 +13,7 @@
   
 #### `Front-end`
   - jQuery
+  - JSP
 
 </br>
 
