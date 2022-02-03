@@ -18,7 +18,8 @@
 </br>
 
 ## 3. ERD 설계
-![]()
+![image](https://user-images.githubusercontent.com/69364279/152341195-829c8b1a-6ef3-4224-aab2-9291ef8ed02c.png)
+
 
 
 ## 4. 핵심 기능
@@ -32,28 +33,5 @@
 
 </br>
 
-## 5. 핵심 트러블 슈팅
-### 5.1. 
-
-<details>
-<summary><b>기존 코드</b></summary>
-<div markdown="1">
-
-~~~java
-
-~~~
-
-</div>
-</details>
 
 
-
-</br>
-
-## 6. 그 외 트러블 슈팅
-
-    
-</br>
-
-## 6. 회고 / 느낀점
->프로젝트 개발 회고 글:
